@@ -7,15 +7,15 @@ plugins {
 }
 
 android {
-    namespace = ProjectSetting.PACKAGE_NAME
-    compileSdk = 34
+    namespace = ProjectSetting.PROJECT_NAMESPACE
+    compileSdk = ProjectSetting.COMPILE_SDK
 
     defaultConfig {
-        applicationId = ProjectSetting.PACKAGE_NAME
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = ProjectSetting.PROJECT_PACKAGE_NAME
+        minSdk = ProjectSetting.MIN_SDK
+        targetSdk = ProjectSetting.TARGET_SDK
+        versionCode = ProjectSetting.VERSION_CODE
+        versionName = ProjectSetting.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,23 +29,28 @@ android {
             )
         }
     }
-    
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = "1.8"
+    kotlin {
+        jvmToolchain {
+            languageVersion.set(JavaLanguageVersion.of("17"))
+        }
     }
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
 }
 
 dependencies {
+
+    implementation(project(":library"))
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
