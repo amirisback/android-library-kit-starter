@@ -20,7 +20,7 @@ object ProjectSetting {
 
     const val VERSION_MAJOR = 0
     const val VERSION_MINOR = 0
-    const val VERSION_PATCH = 1
+    const val VERSION_PATCH = 3
 
     // ---------------------------------------------------------------------------------------------
     // Default Setting - Do Not Change
