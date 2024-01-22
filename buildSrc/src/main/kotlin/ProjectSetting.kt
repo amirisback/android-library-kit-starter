@@ -10,17 +10,20 @@
 
 object ProjectSetting {
 
-    const val PROJECT_NAMESPACE = "com.qomunal.opensource.androidresearch"
-    const val PROJECT_PACKAGE_NAME = "com.qomunal.opensource.androidresearch"
+    const val BASE_PACKAGE = "com.qomunal.opensource"
 
-    const val LIBRARY_PACKAGE_NAME = "com.qomunal.opensource.library"
+    const val PROJECT_NAMESPACE = "$BASE_PACKAGE.androidresearch"
+    const val PROJECT_PACKAGE_NAME = "$BASE_PACKAGE.androidresearch"
+
+    const val LIBRARY_NAME = "library"
+    const val LIBRARY_PACKAGE_NAME = "$BASE_PACKAGE.$LIBRARY_NAME"
 
     // Version App
     const val VERSION_CODE = 1
 
     const val VERSION_MAJOR = 0
     const val VERSION_MINOR = 0
-    const val VERSION_PATCH = 3
+    const val VERSION_PATCH = 4
 
     // ---------------------------------------------------------------------------------------------
     // Default Setting - Do Not Change
