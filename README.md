@@ -1,6 +1,8 @@
 ## Android Research Tech
-- Template repository for doing research on Android Technologies
+
 [![](https://jitpack.io/v/teamqomunal/android-library-kit-starter.svg)](https://jitpack.io/#teamqomunal/android-library-kit-starter)
+- Template repository for doing research on Android Technologies
+
 
 ## How To Use / Implement This Project
 ### Step 1. Add the JitPack repository to your build file
